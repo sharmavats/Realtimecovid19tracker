@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="350dp"
+       android:background="@color/color_primary" >
+
+      <ImageView
+          android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_alignParentBottom="true"
+          android:layout_marginLeft="-30dp"
+          android:src="@drawable/coronavirus" />
+
+      <ImageView
+          android:id="@+id/virus1"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_alignParentEnd="true"
+          android:layout_margin="-30dp"
+          android:src="@drawable/coronavirus" />
+
+      <ImageView
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_alignParentTop="true"
+          android:layout_margin="-30dp"
+          android:layout_marginTop="50dp"
+          android:layout_marginRight="10dp"
+          android:layout_toStartOf="@+id/virus1"
+          android:src="@drawable/coronavirus" />
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="20dp"
+          android:orientation="vertical" >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/rubik_regular"
+          android:text = "COVID-19 TRACKER"
+          android:textColor="@color/white"
+          android:textSize="@dimen/text_size" />
+
+         <TextView
+             android:id="@+id/cname"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/rubik_bold"
+          android:text = "INDIA"
+          android:textColor="@color/white"
+             android:drawableRight="@drawable/ic_dropdown"
+             android:layout_marginTop="10dp"
+             android:drawablePadding="07dp"
+          android:textSize="@dimen/title_size3" />
+
+         <TextView
+             android:id="@+id/date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/rubik_light"
+          android:text = "Updated at may 21,2021"
+          android:textColor="@color/white"
+           android:layout_marginTop="5dp"
+          android:textSize="@dimen/title_size" />
+
+      </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentBottom="true"
+       android:layout_marginBottom="12dp"
+       android:layout_marginEnd="12dp"
+      android:layout_alignParentEnd="true" >
+
+      <org.eazegraph.lib.charts.PieChart
+          android:id="@+id/piechart"
+          android:layout_width="120dp"
+          android:layout_height="150dp"
+          android:padding="10dp"
+          app:egInnerPaddingColor="@color/color_primary"
+          app:egLegendTextSize="0sp"
+          app:egLegendHeight="0dp"
+          app:egUsePieRotation="true"
+          app:egValueTextSize="0sp" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+         android:orientation="horizontal"
+          android:layout_marginLeft="10dp">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="center_vertical"
+             android:layout_marginEnd="5dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+               android:orientation="horizontal" >
+
+               <View
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                  android:background="@color/YELLOW" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/rubik_regular"
+                   android:text = "Confirm  "
+                   android:layout_marginStart="5dp"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+               android:orientation="horizontal" >
+
+               <View
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                  android:background="@color/BLUE_PIE" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/rubik_regular"
+                   android:text = "Active"
+                   android:layout_marginStart="5dp"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+               android:orientation="horizontal" >
+
+               <View
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                  android:background="@color/green_pie" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/rubik_regular"
+                   android:text = "Recovered "
+                   android:layout_marginStart="5dp"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+               android:orientation="horizontal" >
+
+               <View
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                  android:background="@color/red_pie" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/rubik_regular"
+                   android:text = "Death "
+                   android:layout_marginStart="5dp"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+         </LinearLayout>
+
+
+
+      </LinearLayout>
+
+
+   </LinearLayout>
+
+   </RelativeLayout>
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/color_primary">
+
+      <GridLayout
+          android:layout_width="380dp"
+          android:layout_height="wrap_content"
+          android:paddingHorizontal="12dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+         android:columnCount="2">
+
+         <com.google.android.material.card.MaterialCardView
+             android:layout_width="152dp"
+             android:layout_height="111dp"
+             android:layout_columnWeight="1"
+             android:layout_gravity="center"
+             android:padding="12dp"
+             app:strokeColor="@color/white"
+             app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="18dp"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@color/YELLOW" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:fontFamily="@font/rubik_regular"
+                      android:text="Confirm  "
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/text_size" />
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/totalconfirm"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_bold"
+                   android:text="4231546 "
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/title_size" />
+
+               <TextView
+                   android:id="@+id/todayconfirm"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_regular "
+                   android:text="(+3200)"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+         </com.google.android.material.card.MaterialCardView>
+
+         <com.google.android.material.card.MaterialCardView
+             android:layout_width="152dp"
+             android:layout_height="111dp"
+             android:layout_columnWeight="1"
+             android:layout_gravity="center"
+             android:padding="12dp"
+             app:strokeColor="@color/white"
+             app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="18dp"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@color/BLUE" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:fontFamily="@font/rubik_regular"
+                      android:text="Active "
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/text_size" />
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/totalactive"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_bold"
+                   android:text="320000 "
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/title_size" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_regular "
+                   android:text=" "
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+         </com.google.android.material.card.MaterialCardView>
+
+         <com.google.android.material.card.MaterialCardView
+             android:layout_width="152dp"
+             android:layout_height="111dp"
+             android:layout_columnWeight="1"
+             android:layout_gravity="center"
+             android:padding="12dp"
+             android:layout_marginTop="12dp"
+             app:strokeColor="@color/white"
+             app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="18dp"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@color/green" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:fontFamily="@font/rubik_regular"
+                      android:text="Recover"
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/text_size" />
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/totalrecover"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_bold"
+                   android:text="4231546"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/title_size" />
+
+               <TextView
+                   android:id="@+id/todayrecover"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_regular "
+                   android:text="(+3200)"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+         </com.google.android.material.card.MaterialCardView>
+
+         <com.google.android.material.card.MaterialCardView
+             android:layout_width="152dp"
+             android:layout_height="111dp"
+             android:layout_columnWeight="1"
+             android:layout_gravity="center"
+             android:padding="12dp"
+             android:layout_marginTop="12dp"
+             app:strokeColor="@color/white"
+             app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="18dp"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@color/red_pie" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:fontFamily="@font/rubik_regular"
+                      android:text="Death "
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/text_size" />
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/totaldeath"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_bold"
+                   android:text="4231546"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/title_size" />
+
+               <TextView
+                   android:id="@+id/todaydeath"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_regular "
+                   android:text="(+3200)"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+         </com.google.android.material.card.MaterialCardView><com.google.android.material.card.MaterialCardView
+             android:layout_width="152dp"
+             android:layout_height="111dp"
+             android:layout_columnWeight="1"
+             android:layout_gravity="center"
+             android:padding="12dp"
+             app:strokeColor="@color/white"
+          android:layout_marginTop="12dp"
+             app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="18dp"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@color/PINK" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:fontFamily="@font/rubik_regular"
+                      android:text="Test "
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/text_size" />
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/totaltest"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_bold"
+                   android:text=" 180000 "
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/title_size" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="7dp"
+                   android:fontFamily="@font/rubik_regular "
+                   android:text=""
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+         </com.google.android.material.card.MaterialCardView>
+
+      </GridLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

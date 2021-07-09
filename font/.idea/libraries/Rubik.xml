@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Rubik">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Rubik.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
