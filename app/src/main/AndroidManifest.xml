@@ -11,13 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Realtimecovid19tracker">
-        <activity android:name=".CoountryActivity"></activity>
-        <activity android:name=".MainActivity">
-            <intent-filter>
+        <activity android:name=".splashscreen">
+            <intent-filter>  // addingsplash screen as first activity by adding intent filter in it from main activity
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".CoountryActivity" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
